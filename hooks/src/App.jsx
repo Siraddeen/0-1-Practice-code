@@ -2,34 +2,28 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import "./App.css";
 function App() {
-  return (
-    <>
-      <MyComponent />
-    </>
-  );
+  const [vis, setVis] = useState(true);
+  useEffect(() => {
+    const tim = setTimeout(() => {
+      setVis((r) => !r);
+    }, 2000);
+    return () => {
+      clearTimeout(tim);
+    };
+  });
+  return <>{vis && <MyComponent />}</>;
 }
 
+// dissapper in 2 seconds
 const MyComponent = () => {
-  const [count, setCount] = useState(0);
-  const [sm, setSm] = useState(false);
-  const inc = () => {
-    setCount(count + 1);
-    setSm(true);
-  };
   useEffect(() => {
-    if (sm) {
-      console.log("you are good");
-    }
-  }, [count, sm]);
+    console.log("c mounted");
+    return () => {
+      console.log("c unmounted");
+    };
+  }, []);
 
-  return (
-    <>
-      <div>hi</div>
-      <p>{count}</p>
-      <button onClick={inc}>press me {count}</button>
-      {sm && <p>You are good!</p>}
-    </>
-  );
+  return <>from inside my component</>;
 };
 
 export default App;
