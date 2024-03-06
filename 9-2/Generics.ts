@@ -36,3 +36,14 @@ console.log(g1.toUpperCase());
 console.log(g2);
 
 // here    <T> refers any
+
+//-------------------- consise SOLUTION -------------------------------------------------------------------
+
+function getFirstElement<T>(arr: T[]) {
+  return arr[0];
+}
+
+const randStr = getFirstElement<string>(["ntr", "eachma"]);  // use <string>  if you are gonna explicitly use string
+const randNum = getFirstElement<number>([45, 57]);  // use <number>  if you are gonna explicitly use number
+console.log(randStr.toUpperCase());
+console.log(randNum);
