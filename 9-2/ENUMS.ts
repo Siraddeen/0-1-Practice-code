@@ -42,3 +42,19 @@ pressIt('Down')  // wrong
 pressIt(Direction.Down)  // right
 pressIt(Direction.mango)  // wrong
 
+// -------------- another example ------------------------------------------------
+// from express 
+const app =express()
+enum ResponseStatus {
+    Success = 200,
+    NotFound = 404,
+    Error = 500
+}
+
+app.get('/', (req, res) => {
+    if (!req.query.userId) {
+			res.status(ResponseStatus.Error).json({}) // rather than using 404
+    }
+    // and so on...
+		res.status(ResponseStatus.Success).json({});
+})
