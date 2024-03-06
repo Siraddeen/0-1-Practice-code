@@ -26,3 +26,17 @@ let u = pep({
   age: 20,
 });
 console.log(u);
+// ------------------------------------------------------------------------------------------------------------------------------
+
+// another example
+interface Raja {
+  fname: string;
+  lname: string;
+  age: number;
+}
+let w: Raja = {
+  fname: "raj",
+  lname: "dins",
+  age: 20,
+};
+console.log(w);
