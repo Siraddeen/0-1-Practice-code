@@ -27,3 +27,18 @@ pressMe("left"); // this is ok
 pressMe("upf"); // this is not ok
 pressMe("sarigama"); // this is not ok
 
+//---------- This way is good  But we can do better -----------------------------------------------------------
+
+enum Direction {
+  Up,
+  Down,
+  left,
+  right,
+}
+function pressIt(but:Direction) {
+    // your logic
+}
+pressIt('Down')  // wrong
+pressIt(Direction.Down)  // right
+pressIt(Direction.mango)  // wrong
+
