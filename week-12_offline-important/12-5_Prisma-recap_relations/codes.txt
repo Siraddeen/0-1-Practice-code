@@ -1,0 +1,33 @@
+1:-to install  a prisma
+
+ npm install prisma typescript ts-node @types/node --save-dev
+
+
+
+2:- to create a prisma file 
+   npx prisma init
+
+
+3:- to generate a sql from prisma    
+  npx prisma migrate dev --name (your wish name)
+        
+        this command will let you create a sql migration , you can add | modify your sql in schema.prisma
+        then again run this command  
+          npx prisma migrate dev --name (your wish name)
+          to add new modification to your sql schema
+
+
+
+4:- to generate Client
+
+  Client means database client , means if i create a Users table then how can i able to use it in index.ts file
+  this is where we use client as   Users
+
+  code to create a Client    run in terminal
+
+              npx prisma generate 
+
+
+
+   now when i run this command it automatically create & push some code in to modules  at  @prisma folder
+   we can use it

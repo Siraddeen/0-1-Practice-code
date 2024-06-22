@@ -1,0 +1,24 @@
+for creating new postgres on docker locally :
+
+docker run -e POSTGRES_PASSWORD=mypass123 -p 5432:5432 -d postgres 
+
+
+
+
+
+if you want to use psql inside docker use:
+
+docker exec -it (docker-number ex:8d8dc1af56s4) /bin/bash         then use        psql -h localhost -d postgres -U postgres
+
+
+
+
+
+to use psql locally :
+
+psql -h localhost -d postgres -U postgres
+
+
+
+
+
