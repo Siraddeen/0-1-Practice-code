@@ -1,0 +1,20 @@
+successfully pushed custom docker image to docker hub
+
+steps
+
+
+first generate docker file
+
+then create a docker image by running            docker build -t name_of_image:tag_of_image
+
+
+then docker login in terminal 
+
+
+now create a fresh repository in docker hub    , try to change the image name you created 
+with the name of repository & rebuild the image
+
+
+now push the docker image to the docker hub                   docker push sir3/oi:v1            
+
+sir3 name of my profile          oi   image name      v1  tag name
